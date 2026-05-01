@@ -1,38 +1,38 @@
-main{
+main {
   padding-block: 32px;
   font: var(--text-md);
 }
 
-main .about-user{
+main .about-user {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#profile{
+#profile {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-#profile > div{
+#profile > div {
   max-width: 384px;
 }
 
-#profile img{
+#profile img {
   width: 176px;
   height: 176px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-#profile h1{
+#profile h1 {
   font: var(--text-lg);
   color: var(--text-color-primary);
   margin-bottom: 8px;
 }
 
-#info{
+#info {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -40,21 +40,54 @@ main .about-user{
   width: 280px;
 }
 
-#info li{
+#info li {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-main .galery{
+main .galery {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   padding-block: 24px;
 }
 
-.galery img{
+.galery img {
   width: 286px;
   height: 286px;
   object-fit: cover;
+}
+
+@media (width < 35em) {
+  .about-user {
+    flex-wrap: wrap;
+
+    & #profile {
+      max-width: 296px;
+      flex-wrap: wrap;
+
+      & img {
+        width: 120px;
+        height: 120px;
+      }
+
+      & h1 {
+        margin-top: -16px;
+      }
+    }
+
+    & #info {
+      margin-block: 32px;
+    }
+  }
+
+  main .galery {
+    justify-content: center;
+  }
+
+  .galery img {
+    width: 328px;
+    height: 328px;
+  }
 }
